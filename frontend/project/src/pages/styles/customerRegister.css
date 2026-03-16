@@ -1,0 +1,115 @@
+/* --- Split Screen Layout --- */
+.auth-split-screen {
+    display: flex;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.auth-visual-side {
+    flex: 1.2;
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=1920&auto=format&fit=crop') center/cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    padding: 60px;
+    color: white;
+}
+
+.auth-form-side {
+    flex: 1;
+    height: 100vh;
+    /* Add this line below to clear the navbar */
+    padding-top: 100px !important; 
+    
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    background: white;
+    overflow-y: auto;
+}
+
+/* Hide visual side on small mobile screens */
+@media (max-width: 900px) {
+    .auth-visual-side { display: none; }
+}
+
+.visual-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+}
+
+.visual-content {
+    position: relative;
+    z-index: 2;
+}
+
+.visual-content h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+/* --- Form Styling --- */
+.auth-form-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 8%;
+    justify-content: center;
+}
+
+.form-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.back-home {
+    text-decoration: none;
+    color: #888;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.auth-tabs {
+    display: flex;
+    gap: 20px;
+}
+
+.tab-link {
+    text-decoration: none;
+    color: #999;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding-bottom: 5px;
+}
+
+.tab-link.active {
+    color: #111;
+    border-bottom: 2px solid #111;
+}
+
+.auth-footer {
+    margin-top: 30px;
+    font-size: 0.8rem;
+    color: #999;
+    text-align: center;
+}
+
+/* --- Specific Input Refinement --- */
+.auth-form-side input, .auth-form-side textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #eee;
+    border-radius: 0;
+    padding: 15px 0;
+    margin-bottom: 10px;
+}
+
+.auth-form-side input:focus {
+    border-bottom-color: #111;
+}

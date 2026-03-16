@@ -1,0 +1,28 @@
+/* Admin Specific Background */
+.admin-bg {
+    background: url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop') center/cover no-repeat !important;
+}
+
+.admin-overlay {
+    background: linear-gradient(to top, rgba(20, 20, 20, 0.9), transparent) !important;
+}
+
+/* Admin Badge Styling */
+.badge-admin {
+    background: #fee2e2;
+    color: #dc2626;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ensure the footer looks more "official" for Admins */
+.compact-footer p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75rem;
+    color: #ef4444;
+    text-transform: uppercase;
+}
