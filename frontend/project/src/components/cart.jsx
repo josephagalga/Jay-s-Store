@@ -6,7 +6,6 @@ import { useCart } from '../context/CartContext';
 
 const Cart = () => {
     const { cart, updateQuantity, removeFromCart, getCartTotal } = useCart();
-
     if (cart.length === 0) {
         return (
             <div className="admin-container" style={{ textAlign: 'center', paddingTop: '100px' }}>
@@ -53,7 +52,7 @@ const Cart = () => {
                                 <button className="qty-btn" onClick={() => updateQuantity(item.id, 1)}>+</button>
                             </div>
 
-                            <p style={{ fontWeight: '700', fontSize: '1.1rem' }}>${(item.price * item.quantity).toFixed(2)}</p>
+                            <p style={{ fontWeight: '700', fontSize: '1.1rem' }}>GH₵{(item.price * item.quantity).toFixed(2)}</p>
                         </div>
                     ))}
                 </div>
@@ -70,7 +69,7 @@ const Cart = () => {
                     <h2 style={{ fontSize: '1.5rem', marginBottom: '20px' }}>SUMMARY</h2>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '15px' }}>
                         <span>Subtotal</span>
-                        <span>${getCartTotal().toFixed(2)}</span>
+                        <span>GH₵{getCartTotal().toFixed(2)}</span>
                     </div>
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '30px' }}>
                         <span>Shipping</span>
@@ -79,7 +78,7 @@ const Cart = () => {
                     <hr style={{ border: 'none', borderTop: '1px solid #ddd', marginBottom: '20px' }} />
                     <div style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '40px' }}>
                         <strong style={{ fontSize: '1.2rem' }}>Total</strong>
-                        <strong style={{ fontSize: '1.2rem' }}>${getCartTotal().toFixed(2)}</strong>
+                        <strong style={{ fontSize: '1.2rem' }}>GH₵{getCartTotal().toFixed(2)}</strong>
                     </div>
                     
                     <Link to="/checkout" className="btn-main" style={{ 

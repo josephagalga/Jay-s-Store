@@ -35,7 +35,6 @@ const Checkout = () => {
     };
 
     if (cart.length === 0) return <div className="admin-container">Your bag is empty.</div>;
-
     return (
         <div className="admin-container" style={{ maxWidth: '600px', margin: '80px auto' }}>
             <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '30px' }}>FINAL CHECKOUT</h2>
@@ -44,13 +43,13 @@ const Checkout = () => {
                 {cart.map(item => (
                     <div key={item.id} style={{ display: 'flex', justifyContent: 'space-between', marginBottom: '10px' }}>
                         <span>{item.name} (x{item.quantity})</span>
-                        <span>${(item.price * item.quantity).toFixed(2)}</span>
+                        <span>GH₵{(item.price * item.quantity).toFixed(2)}</span>
                     </div>
                 ))}
                 <hr style={{ margin: '20px 0', borderColor: '#eee' }} />
                 <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '1.2rem', fontWeight: '800' }}>
                     <span>Total Amount</span>
-                    <span>${getCartTotal().toFixed(2)}</span>
+                    <span>GH₵{getCartTotal().toFixed(2)}</span>
                 </div>
             </div>
 

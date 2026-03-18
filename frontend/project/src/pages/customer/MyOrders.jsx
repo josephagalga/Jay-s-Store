@@ -73,7 +73,7 @@ const MyOrders = () => {
                                     {order.items.map((item, idx) => (
                                         <div key={idx} style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.9rem', marginBottom: '8px' }}>
                                             <span>{item.quantity}x {item.product_details?.name || 'Product'}</span>
-                                            <span>${item.price_at_purchase}</span>
+                                            <span>{item.price_at_purchase}</span>
                                         </div>
                                     ))}
                                 </div>
@@ -82,7 +82,7 @@ const MyOrders = () => {
 
                                 <div style={{ display: 'flex', justifyContent: 'space-between', fontWeight: '800' }}>
                                     <span>TOTAL</span>
-                                    <span>${order.total_price}</span>
+                                    <span>{order.total_price}</span>
                                 </div>
                                 <p style={{ fontSize: '0.75rem', color: '#aaa', marginTop: '15px' }}>
                                     Placed on: {new Date(order.created_at).toLocaleDateString()}

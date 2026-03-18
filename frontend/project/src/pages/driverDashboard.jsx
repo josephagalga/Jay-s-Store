@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import api from '../components/axios';
 import './styles/driverDashboard.css'; 
 
+
 const DriverDashboard = () => {
     const [orders, setOrders] = useState([]);
     const [loading, setLoading] = useState(true);
@@ -81,7 +82,7 @@ const DriverDashboard = () => {
                                     <p><strong>Customer:</strong> {order.customer_details?.username}</p>
                                     <p><strong>Address:</strong> {order.customer_details?.address}</p>
                                     <p><strong>Phone:</strong> 
-                                        <a href={`tel:${order.customer_details?.phone_number}`}>
+                                        <a href={`tel:GH₵{order.customer_details?.phone_number}`}>
                                             {order.customer_details?.phone_number || 'N/A'}
                                         </a>
                                     </p>
@@ -97,6 +98,7 @@ const DriverDashboard = () => {
                     )}
                 </div>
             </section>
+            
 
             {/* --- SECTION 2: ACTIVE --- */}
             <section style={{ marginTop: '50px' }}>

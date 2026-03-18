@@ -29,7 +29,6 @@ const Shop = () => {
             </div>
         );
     }
-
     return (
         <div className="shop-container" style={{ padding: '40px', maxWidth: '1400px', margin: '0 auto' }}>
             <header className="shop-header" style={{ marginBottom: '60px', textAlign: 'center' }}>
@@ -113,7 +112,7 @@ const Shop = () => {
                             <div className="product-info" style={{ marginTop: '15px' }}>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                                     <h3 style={{ fontSize: '1rem', fontWeight: '700', margin: '0' }}>{product.name}</h3>
-                                    <span style={{ fontWeight: '500' }}>${product.price}</span>
+                                    <span style={{ fontWeight: '500' }}>GH₵{product.price}</span>
                                 </div>
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginTop: '5px' }}>
                                     <p style={{ color: '#888', fontSize: '0.85rem', margin: 0 }}>Size: {product.size}</p>

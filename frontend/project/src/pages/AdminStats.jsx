@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import api from '../components/axios';
 import './styles/adminStats.css'; // Import CSS for styling
 
-
 const AdminStats = () => {
     const [stats, setStats] = useState([]);
 
